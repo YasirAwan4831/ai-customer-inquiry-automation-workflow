@@ -1,0 +1,1703 @@
+[
+ {
+  "id": "1-business-introduction",
+  "number": "1",
+  "title": "Business Introduction",
+  "page": 3,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "This document presents the design of a practical AI Customer Inquiry Automation Workflow. To make the design realistic it is built around a sample business: Star Developer an IT and digital services company selected as the sample business for this practical automation exercise.",
+    "page": 3
+   },
+   {
+    "type": "h2",
+    "id": "1-1-sample-business-profile",
+    "number": "1.1",
+    "text": "Sample Business Profile"
+   },
+   {
+    "type": "keyvalue",
+    "rows": [
+     [
+      "Business Name",
+      "Star Developer"
+     ],
+     [
+      "Business Type",
+      "IT Company / Digital Services Company"
+     ],
+     [
+      "Main Products and Services",
+      "Website Development, Web Application Development, Mobile Application Development, AI Solutions, AI Automation, Digital Marketing, Graphic Design, Custom Software Solutions and IT Solutions."
+     ],
+     [
+      "Target Customers",
+      "Businesses, startups, organizations, and individuals who need digital products, software, websites, applications, automation or other technology-related services."
+     ],
+     [
+      "Typical Customer Inquiries",
+      "Questions about available services, website and mobile application development, AI automation, digital marketing, project cost, development timeline, consultation and how to start a project."
+     ],
+     [
+      "Business Problem",
+      "Customers often ask similar questions repeatedly. Answering each one manually uses employee time and can delay responses to potential customers."
+     ],
+     [
+      "Why Automation Is Relevant",
+      "Many inquiries follow recognizable patterns, which makes them well suited to AI-assisted replies. Automation can answer routine questions quickly, record every inquiry and pass genuine sales opportunities and complex cases to the right people."
+     ]
+    ]
+   },
+   {
+    "type": "h2",
+    "id": "1-2-about-this-practical-exercise",
+    "number": "1.2",
+    "text": "About This Practical Exercise"
+   },
+   {
+    "type": "p",
+    "text": "The goal of this exercise is to translate a simple business problem into a working design: a reusable AI prompt, tested sample responses, a clear automation workflow and one extra automation that records qualified leads. The result is a designed solution that a business could later implement with its chosen tools.",
+    "page": 3
+   },
+   {
+    "type": "callout",
+    "title": "Scope and Accuracy Note",
+    "text": "",
+    "items": [
+     "Star Developer is a fictional/sample client business used only to demonstrate the workflow.",
+     "This document makes no claims about the actual operations, staff, customers, pricing or systems of any real company.",
+     "The workflow is a designed workflow. It is not an actual deployed automation and no live integration is claimed.",
+     "Prices, timelines, guarantees, policies and contact details are intentionally not invented. Where they are requested the AI is designed to say that confirmation from the relevant team is required."
+    ]
+   }
+  ]
+ },
+ {
+  "id": "2-business-problem",
+  "number": "2",
+  "title": "Business Problem",
+  "page": 4,
+  "blocks": [
+   {
+    "type": "h2",
+    "id": "2-1-repetitive-customer-inquiries",
+    "number": "2.1",
+    "text": "Repetitive Customer Inquiries"
+   },
+   {
+    "type": "p",
+    "text": "An IT and digital services company typically receives inquiries through its website, email and social media. Many of them repeat the same themes:",
+    "page": 4
+   },
+   {
+    "type": "li",
+    "text": "Which services are available and which one suits the customer's idea.",
+    "page": 4
+   },
+   {
+    "type": "li",
+    "text": "Website development, e-commerce websites and mobile application development.",
+    "page": 4
+   },
+   {
+    "type": "li",
+    "text": "AI solutions and AI automation for business processes.",
+    "page": 4
+   },
+   {
+    "type": "li",
+    "text": "Digital marketing and graphic design support.",
+    "page": 4
+   },
+   {
+    "type": "li",
+    "text": "Project cost and development timeline.",
+    "page": 4
+   },
+   {
+    "type": "li",
+    "text": "Whether a consultation is possible.",
+    "page": 4
+   },
+   {
+    "type": "li",
+    "text": "How to start a project.",
+    "page": 4
+   },
+   {
+    "type": "p",
+    "text": "Answering these questions manually means that employees repeatedly type similar replies, check inquiries across several channels and copy details into records by hand.",
+    "page": 4
+   },
+   {
+    "type": "h2",
+    "id": "2-2-impact-of-manual-handling",
+    "number": "2.2",
+    "text": "Impact of Manual Handling"
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Problem",
+      "What Can Happen",
+      "Business Effect"
+     ],
+     [
+      "Repeated questions",
+      "Staff write nearly identical answers many times a day.",
+      "Employee time is spent on routine work instead of project work."
+     ],
+     [
+      "Delayed responses",
+      "Inquiries sent at night or during busy periods wait for a reply.",
+      "Potential customers may lose interest or contact another provider."
+     ],
+     [
+      "Unrecorded inquiries",
+      "Details remain inside chats and inboxes.",
+      "Potential leads can be forgotten."
+     ],
+     [
+      "Inconsistent answers",
+      "Different team members describe services differently.",
+      "Customers may receive unclear or conflicting information."
+     ],
+     [
+      "Missed follow-ups",
+      "Interested customers are not contacted at the right time.",
+      "Sales opportunities are not pursued."
+     ]
+    ]
+   },
+   {
+    "type": "callout",
+    "title": "A Designed Solution, Not a Case Report",
+    "text": "The problem above is a common pattern for IT service companies. It is used here as a business scenario for designing a solution. It is not a report of a verified problem or an existing system at any specific company.",
+    "items": []
+   }
+  ]
+ },
+ {
+  "id": "3-selected-business-services",
+  "number": "3",
+  "title": "Selected Business Services",
+  "page": 4,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The AI can only answer reliably when it knows what the business offers. The sample business profile lists nine services, shown below with the kind of customer questions each one typically produces.",
+    "page": 4
+   },
+   {
+    "type": "h2",
+    "id": "3-1-services-and-typical-questions",
+    "number": "3.1",
+    "text": "Services and Typical Questions"
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Service",
+      "Typical Customer Questions"
+     ],
+     [
+      "Website Development",
+      "Can you build a business website or an online store? How do I get started?"
+     ],
+     [
+      "Web Application Development",
+      "Can you develop a web-based system for my business processes?"
+     ],
+     [
+      "Mobile Application Development",
+      "Can you create an app for my business? Which platforms are possible?"
+     ],
+     [
+      "AI Solutions",
+      "How can AI be used in my business? Can you build an AI chatbot?"
+     ],
+     [
+      "AI Automation",
+      "Can you automate repetitive tasks such as customer replies or lead handling?"
+     ],
+     [
+      "Digital Marketing",
+      "Can you help promote my brand or products online?"
+     ],
+     [
+      "Graphic Design",
+      "Can you design a logo, social media graphics or branding material?"
+     ],
+     [
+      "Custom Software Solutions",
+      "Can you build software tailored to my specific requirements?"
+     ],
+     [
+      "IT Solutions",
+      "Can you help with my business technology needs?"
+     ]
+    ]
+   },
+   {
+    "type": "h2",
+    "id": "3-2-information-boundaries-for-the-ai",
+    "number": "3.2",
+    "text": "Information Boundaries for the AI"
+   },
+   {
+    "type": "p",
+    "text": "A reliable automation clearly separates what the AI may say from what must be confirmed by a person.",
+    "page": 5
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "The AI May Use",
+      "Requires Confirmation from the Team"
+     ],
+     [
+      "Business name and business type",
+      "Exact prices, quotations and discounts"
+     ],
+     [
+      "The list of main services",
+      "Delivery times and project deadlines"
+     ],
+     [
+      "General, non-technical descriptions of services",
+      "Guarantees and company policies"
+     ],
+     [
+      "Description of the typical target customers",
+      "Contact details, addresses and availability schedules"
+     ],
+     [
+      "General guidance on what details help the team",
+      "Technical feasibility of specific or unusual requirements"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "4-customer-inquiry-automation-objective",
+  "number": "4",
+  "title": "Customer Inquiry Automation Objective",
+  "page": 5,
+  "blocks": [
+   {
+    "type": "h2",
+    "id": "4-1-project-objective",
+    "number": "4.1",
+    "text": "Project Objective"
+   },
+   {
+    "type": "p",
+    "text": "The objective is to design a practical workflow that reduces repetitive customer-support work for an IT company, while making sure that customers receive a fast, professional and accurate reply and that every inquiry is recorded for follow-up.",
+    "page": 5
+   },
+   {
+    "type": "h2",
+    "id": "4-2-the-core-workflow",
+    "number": "4.2",
+    "text": "The Core Workflow"
+   },
+   {
+    "type": "flow",
+    "steps": [
+     "Receive",
+     "Understand",
+     "Generate",
+     "Respond",
+     "Record"
+    ]
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Stage",
+      "Meaning",
+      "In This Project"
+     ],
+     [
+      "Receive",
+      "The inquiry arrives and starts the automation.",
+      "A customer message from chat, email or social media triggers the workflow."
+     ],
+     [
+      "Understand",
+      "The system works out what the customer wants.",
+      "AI classifies the inquiry, detects intent and extracts key details."
+     ],
+     [
+      "Generate",
+      "A suitable reply is prepared.",
+      "AI writes a response using only approved business information."
+     ],
+     [
+      "Respond",
+      "The customer receives the reply.",
+      "A professional message with a clear next step is sent."
+     ],
+     [
+      "Record",
+      "The inquiry is stored for the business.",
+      "The message, classification and lead status are saved and the next action is triggered."
+     ]
+    ]
+   },
+   {
+    "type": "h2",
+    "id": "4-3-designed-workflow-and-actual-deployment",
+    "number": "4.3",
+    "text": "Designed Workflow and Actual Deployment"
+   },
+   {
+    "type": "p",
+    "text": "It is important to be clear about what this document does and does not claim.",
+    "page": 6
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Designed and Demonstrated Here",
+      "Not Claimed"
+     ],
+     [
+      "A reusable master AI prompt",
+      "A live, deployed automation system"
+     ],
+     [
+      "Sample responses to five customer questions",
+      "Real customer conversations or customer data"
+     ],
+     [
+      "A workflow design and a visual diagram",
+      "Existing integrations with any tool or platform"
+     ],
+     [
+      "Three testing scenarios",
+      "Accuracy, speed or time-saving statistics"
+     ],
+     [
+      "A lead-recording concept (bonus automation)",
+      "An actual Google Sheets integration"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "5-five-customer-questions",
+  "number": "5",
+  "title": "Five Customer Questions",
+  "page": 6,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The five questions below were written for Star Developer's IT and digital services. Each represents a different type of inquiry so that the master prompt can be tested across a realistic range of situations.",
+    "page": 6
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "#",
+      "Customer Question",
+      "Inquiry Type",
+      "Customer Intent"
+     ],
+     [
+      "1",
+      "\"Hello, I run a small clothing brand. What services do you offer? I need help with both a website and online marketing.\"",
+      "General service inquiry",
+      "Understand what the company offers and whether it fits the customer's needs."
+     ],
+     [
+      "2",
+      "\"Roughly how much would it cost to build a mobile app for my restaurant?\"",
+      "Pricing inquiry",
+      "Get an idea of the cost before deciding to proceed."
+     ],
+     [
+      "3",
+      "\"Can you build a custom website where my customers can book appointments and pay online?\"",
+      "Development / service inquiry",
+      "Check whether the company can deliver a specific kind of project."
+     ],
+     [
+      "4",
+      "\"How long does it usually take to build a business website and how do I get started?\"",
+      "Process and timeline inquiry",
+      "Learn the expected timeline and the first steps of working together."
+     ],
+     [
+      "5",
+      "\"We are a startup planning an AI chatbot for our customer support. Could someone from your team contact me to discuss it?\"",
+      "Potential customer / lead inquiry",
+      "Start a conversation with the team about a real project."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "6-master-ai-response-prompt",
+  "number": "6",
+  "title": "Master AI Response Prompt",
+  "page": 7,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The master prompt is the core of this solution. It is a single reusable instruction that tells the AI who it is, what it knows about the business, what it must do with each customer message and what it must never invent. Because the same prompt is used for every inquiry, replies stay consistent and controlled.",
+    "page": 7
+   },
+   {
+    "type": "h2",
+    "id": "6-1-how-to-use-the-prompt",
+    "number": "6.1",
+    "text": "How to Use the Prompt"
+   },
+   {
+    "type": "p",
+    "text": "1. Copy the prompt from the box in Section 6.2.",
+    "page": 7
+   },
+   {
+    "type": "p",
+    "text": "2. Replace {{CHANNEL}} with the source of the message (for example, website chat).",
+    "page": 7
+   },
+   {
+    "type": "p",
+    "text": "3. Replace {{CUSTOMER_MESSAGE}} with the customer's message.",
+    "page": 7
+   },
+   {
+    "type": "p",
+    "text": "4. Send the completed prompt to the AI model.",
+    "page": 7
+   },
+   {
+    "type": "p",
+    "text": "5. Use the structured output: the customer response is sent to the customer and the remaining fields guide recording and the next action.",
+    "page": 7
+   },
+   {
+    "type": "h2",
+    "id": "6-2-the-prompt-copy-and-use",
+    "number": "6.2",
+    "text": "The Prompt (Copy and Use)"
+   },
+   {
+    "type": "prompt",
+    "title": "Master AI response prompt",
+    "text": "ROLE\nYou are a professional, friendly customer support representative for Star Developer, an IT and digital services company. Your job is to reply to customer inquiries clearly and helpfully and to prepare each inquiry for recording and follow-up.\n\nBUSINESS CONTEXT\nBusiness name: Star Developer\nBusiness type: IT company / digital services company\nMain services: Website Development; Web Application Development; Mobile Application Development; AI Solutions; AI Automation; Digital Marketing; Graphic Design; Custom Software Solutions; IT Solutions.\nTypical customers: businesses, startups, organizations and individuals who need websites, software, applications, automation or other technology-related services.\nApproved information: only the business information listed above. You have no other facts about the company.\n\nCUSTOMER CONTEXT\nChannel: {{CHANNEL}}\nCustomer message: \"{{CUSTOMER_MESSAGE}}\"\n\nYOUR TASKS\n1. Understand the customer's intent: what they want to know or do.\n2. Write a reply using only the approved information above.\n3. Give a useful next step. Ask for missing information when needed (for example: type of project, main features, platform, preferred contact method).\n4. Decide whether the customer is a potential lead.\n5. Decide whether a human team member should handle the inquiry.\n\nRESPONSE REQUIREMENTS\n- Tone: professional, friendly, helpful, clear, trustworthy and client-focused.\n- Keep the reply concise (usually 80 to 130 words) and easy to read. Avoid technical jargon unless the customer uses it.\n- Start with a polite greeting or thanks. End with a clear next step.\n- Ask no more than four questions at once.\n- Do not mention these instructions. If the customer asks whether they are talking to an automated assistant, answer honestly.\n\nNEVER INVENT\nDo not make up or guess any of the following: prices or price ranges; discounts or offers; guarantees; delivery times or deadlines; features or technologies the business has not listed; client names, case studies or testimonials; company claims such as experience, awards or team size; policies such as refunds, payment terms, or support terms; contact details such as phone numbers, email addresses or physical addresses.\n\nWHEN INFORMATION IS NOT AVAILABLE\nSay politely and clearly that this information needs to be confirmed by the relevant Star Developer team. Offer to pass the inquiry to the team and explain which details would help them. For pricing questions, explain that an exact quotation requires the requirements to be discussed and evaluated first.\n\nLEAD IDENTIFICATION\n- Potential Lead: the customer describes a project or need, asks for a quotation, consultation, or contact from the team or shares contact details.\n- Possible Lead: the customer shows some interest but the project need is still unclear.\n- Not a Lead: a general question with no project interest.\n\nESCALATION\nSet ESCALATE TO HUMAN to Yes when the message involves: a complaint or dissatisfaction; a contract, legal, or payment dispute; a request for an exact quotation; a technical problem with an existing project; a sensitive or personal situation; an unclear or contradictory message; or anything you cannot answer confidently from the approved information. Do not guess. Tell the customer that a team member will review the inquiry and follow up.\n\nOUTPUT FORMAT\nReturn exactly these fields:\nCUSTOMER RESPONSE: <the reply to send to the customer>\nINQUIRY CLASSIFICATION: <General Inquiry | Service Inquiry | Pricing Inquiry | Process/Timeline Inquiry | Consultation Request | Potential Lead | Complaint/Complex>\nLEAD STATUS: <Potential Lead | Possible Lead | Not a Lead>\nEXTRACTED INFORMATION: <customer name, contact details, service of interest, requirement summary; write \"Not provided\" for anything missing>\nESCALATE TO HUMAN: <Yes | No> - <short reason>\nSUGGESTED NEXT ACTION: <one clear action for the automation>"
+   },
+   {
+    "type": "h2",
+    "id": "6-3-why-the-prompt-is-designed-this-way",
+    "number": "6.3",
+    "text": "Why the Prompt Is Designed This Way"
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Prompt Component",
+      "Purpose"
+     ],
+     [
+      "Role",
+      "Sets the voice and responsibility of the AI as a customer support representative."
+     ],
+     [
+      "Business Context",
+      "Gives the AI the approved facts about Star Developer so that answers stay accurate."
+     ],
+     [
+      "Customer Context",
+      "Provides the customer message and channel for the AI to analyse."
+     ],
+     [
+      "Tasks",
+      "Guides the AI through intent detection, response generation, lead checking and escalation."
+     ],
+     [
+      "Response Requirements",
+      "Controls tone, length and clarity so reply feel professional and consistent."
+     ],
+     [
+      "Never Invent",
+      "Prevents made-up prices, guarantees, timelines, policies and contact details."
+     ],
+     [
+      "Unavailable Information",
+      "Teaches the AI to be honest and to hand off to the team instead of guessing."
+     ],
+     [
+      "Lead Identification",
+      "Allows potential customers to be recognized and recorded."
+     ],
+     [
+      "Escalation",
+      "Sends complex, sensitive or uncertain cases to a human."
+     ],
+     [
+      "Output Format",
+      "Produces structured fields that the automation can use for recording and next actions."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "7-ai-generated-responses",
+  "number": "7",
+  "title": "AI-Generated Responses",
+  "page": 9,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The five customer questions from Section 5 were handled using the master prompt. For each one, the tables below show the customer message, the response written according to the prompt, the inquiry classification, the lead status, the extracted information and the suggested next action.",
+    "page": 9
+   },
+   {
+    "type": "callout",
+    "title": "Documentation Note",
+    "text": "The responses are sample outputs prepared by applying the master prompt to each question. They are shown as documentation of the prompt design. No screenshots or logs from an external automation system are included and none are implied.",
+    "items": []
+   },
+   {
+    "type": "h2",
+    "id": "7-1-question-1-general-service-inquiry",
+    "number": "7.1",
+    "text": "Question 1: General Service Inquiry"
+   },
+   {
+    "type": "qa",
+    "rows": [
+     [
+      "Customer Message",
+      "\"Hello, I run a small clothing brand. What services do you offer? I need help with both a website and online marketing.\""
+     ],
+     [
+      "AI Response",
+      "Hello, and thank you for contacting Star Developer! We would be happy to help your clothing brand. Star Developer provides website development, web and mobile application development, AI solutions and AI automation, digital marketing, graphic design, custom software solutions and IT solutions. A website and digital marketing support are both areas we can look into with you. To point you in the right direction, could you tell me: (1) whether you already have a website and (2) what you would like to achieve online, for example selling products or building brand awareness? Our team can then review your needs and discuss the next steps with you."
+     ],
+     [
+      "Inquiry Classification",
+      "General Inquiry"
+     ],
+     [
+      "Lead Status",
+      "Possible Lead"
+     ],
+     [
+      "Extracted Information",
+      "Name: Not provided. Contact: Not provided. Services of interest: Website Development, Digital Marketing. Requirement summary: Small clothing brand needs a website and online marketing."
+     ],
+     [
+      "Suggested Next Action",
+      "Record the inquiry, tag the services of interest and wait for the customer's reply with project details. Upgrade to a lead when contact details and project needs are provided."
+     ]
+    ],
+    "kind": "question"
+   },
+   {
+    "type": "h2",
+    "id": "7-2-question-2-pricing-inquiry",
+    "number": "7.2",
+    "text": "Question 2: Pricing Inquiry"
+   },
+   {
+    "type": "qa",
+    "rows": [
+     [
+      "Customer Message",
+      "\"Roughly how much would it cost to build a mobile app for my restaurant?\""
+     ],
+     [
+      "AI Response",
+      "Thank you for your interest in Star Developer! We provide mobile application development and would be glad to help. I am not able to give a price in this chat, because the cost of an app depends on your requirements, such as the features you need (for example online ordering or table reservations), the platforms (Android, iOS or both) and the design. Our team can evaluate your requirements and then provide a proper quotation. To help us prepare, could you share the main features you have in mind and whether you have any design or branding ideas? If you would like the team to contact you, please also share your name and preferred contact method."
+     ],
+     [
+      "Inquiry Classification",
+      "Pricing Inquiry"
+     ],
+     [
+      "Lead Status",
+      "Potential Lead"
+     ],
+     [
+      "Extracted Information",
+      "Name: Not provided. Contact: Not provided. Service of interest: Mobile Application Development. Requirement summary: Mobile app for a restaurant; cost estimate requested."
+     ],
+     [
+      "Suggested Next Action",
+      "Record the inquiry, ask for features and contact details and flag for human follow-up because an exact quotation must come from the team. Notify the sales team once contact details are received."
+     ]
+    ],
+    "kind": "question"
+   },
+   {
+    "type": "h2",
+    "id": "7-3-question-3-development-service-inquiry",
+    "number": "7.3",
+    "text": "Question 3: Development / Service Inquiry"
+   },
+   {
+    "type": "qa",
+    "rows": [
+     [
+      "Customer Message",
+      "\"Can you build a custom website where my customers can book appointments and pay online?\""
+     ],
+     [
+      "AI Response",
+      "Thank you for contacting Star Developer! We offer website development, web application development and custom software solutions, so a website with online booking and payment is the kind of project our team can evaluate with you. Because features like these depend on your exact requirements, the team will need to review the details before confirming the best approach. Could you tell me: (1) what type of business you run, (2) how bookings should work, for example services and time slots, (3) which payment options you would like to offer, and (4) whether you already have a website? Once I have these details, I can pass them to the team."
+     ],
+     [
+      "Inquiry Classification",
+      "Service Inquiry"
+     ],
+     [
+      "Lead Status",
+      "Potential Lead"
+     ],
+     [
+      "Extracted Information",
+      "Name: Not provided. Contact: Not provided. Services of interest: Website Development, Custom Software Solutions. Requirement summary: Custom website with online booking and online payment."
+     ],
+     [
+      "Suggested Next Action",
+      "Record the inquiry and request project requirements. Create a lead when requirements and contact details are received and request a human technical review of the feature set."
+     ]
+    ],
+    "kind": "question"
+   },
+   {
+    "type": "h2",
+    "id": "7-4-question-4-process-and-timeline-inquiry",
+    "number": "7.4",
+    "text": "Question 4: Process and Timeline Inquiry"
+   },
+   {
+    "type": "qa",
+    "rows": [
+     [
+      "Customer Message",
+      "\"How long does it usually take to build a business website, and how do I get started?\""
+     ],
+     [
+      "AI Response",
+      "Thank you for your question! The time needed to build a website depends on several factors, such as the number of pages, the design requirements, the features needed and how quickly content and feedback are ready. For this reason, I cannot confirm a timeline before the team understands your requirements. The best way to get started is to share a short overview of your project: your type of business, the purpose of the website, any special features and any preferred deadline. The team can then review these details and discuss a suitable timeline and the next steps with you."
+     ],
+     [
+      "Inquiry Classification",
+      "Process/Timeline Inquiry"
+     ],
+     [
+      "Lead Status",
+      "Possible Lead"
+     ],
+     [
+      "Extracted Information",
+      "Name: Not provided. Contact: Not provided. Service of interest: Website Development. Requirement summary: Business website; timeline and process requested."
+     ],
+     [
+      "Suggested Next Action",
+      "Record the inquiry, ask for project details and wait for the customer's reply. Upgrade to a lead if the customer shares a project description and contact information."
+     ]
+    ],
+    "kind": "question"
+   },
+   {
+    "type": "h2",
+    "id": "7-5-question-5-potential-customer-lead-inquiry",
+    "number": "7.5",
+    "text": "Question 5: Potential Customer / Lead Inquiry"
+   },
+   {
+    "type": "qa",
+    "rows": [
+     [
+      "Customer Message",
+      "\"We are a startup planning an AI chatbot for our customer support. Could someone from your team contact me to discuss it?\""
+     ],
+     [
+      "AI Response",
+      "Thank you for reaching out to Star Developer! AI solutions and AI automation are part of our services, so a customer support chatbot is something our team would be happy to discuss with you. I have noted your request to be contacted. To pass it on, could you please share your name and your email address or phone number, along with your preferred contact method? It would also help to know briefly what your startup does and what you would like the chatbot to handle, for example common questions or collecting customer details. A team member will then follow up with you."
+     ],
+     [
+      "Inquiry Classification",
+      "Potential Lead"
+     ],
+     [
+      "Lead Status",
+      "Potential Lead (high intent)"
+     ],
+     [
+      "Extracted Information",
+      "Name: Not provided. Contact: Not provided. Service of interest: AI Solutions / AI Automation. Requirement summary: Startup planning an AI customer support chatbot; contact from the team requested."
+     ],
+     [
+      "Suggested Next Action",
+      "Create a lead record with the status \"Contact details pending\". Request name and contact details. Once received, notify the sales team and schedule human follow-up."
+     ]
+    ],
+    "kind": "question"
+   },
+   {
+    "type": "h2",
+    "id": "7-6-summary-of-the-five-responses",
+    "number": "7.6",
+    "text": "Summary of the Five Responses"
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "# Inquiry Type",
+      "Classification",
+      "Lead Status",
+      "Main Next Action"
+     ],
+     [
+      "1 General service inquiry",
+      "General Inquiry",
+      "Possible Lead",
+      "Record and ask for project details"
+     ],
+     [
+      "2 Pricing inquiry",
+      "Pricing Inquiry",
+      "Potential Lead",
+      "Collect requirements; human prepares quotation"
+     ],
+     [
+      "Development / service 3 inquiry",
+      "Service Inquiry",
+      "Potential Lead",
+      "Collect requirements; human technical review"
+     ],
+     [
+      "Process and timeline 4 inquiry",
+      "Process/Timeline Inquiry",
+      "Possible Lead",
+      "Record and ask for project details"
+     ],
+     [
+      "5 Potential customer / lead",
+      "Potential Lead",
+      "Potential Lead (high intent)",
+      "Create lead; notify sales team after contact details"
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "8-automation-workflow",
+  "number": "8",
+  "title": "Automation Workflow",
+  "page": 12,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The core model of Receive, Understand, Generate, Respond and Record is expanded below into nine practical steps. In simple terms: the customer asks a question, the system reads it, the AI prepares an answer, the customer receives it, everything is saved and the right person is informed when a human is needed.",
+    "page": 12
+   },
+   {
+    "type": "h2",
+    "id": "8-1-the-nine-step-workflow",
+    "number": "8.1",
+    "text": "The Nine-Step Workflow"
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Step",
+      "What Happens",
+      "Handled By",
+      "Output"
+     ],
+     [
+      "1. Customer Sends Message",
+      "A customer submits an inquiry through the website chat, email or social media.",
+      "Customer",
+      "Customer message"
+     ],
+     [
+      "2. Message Received",
+      "The automation trigger detects the new message and starts the workflow.",
+      "Automation system",
+      "Message passed to the AI"
+     ],
+     [
+      "3. AI Classifies the Inquiry",
+      "The AI detects the intent and classifies the inquiry (for example pricing, service, or consultation).",
+      "AI",
+      "Inquiry classification"
+     ],
+     [
+      "4. AI Extracts Information",
+      "The AI picks out useful details: name, contact information, service of interest and requirement summary.",
+      "AI",
+      "Extracted details"
+     ],
+     [
+      "5. AI Generates a Response",
+      "The AI writes a reply based on the master prompt and the approved business information.",
+      "AI",
+      "Draft customer response"
+     ],
+     [
+      "6. Customer Receives the Response",
+      "The reply is sent through the same channel the customer used.",
+      "Automation system",
+      "Delivered reply"
+     ],
+     [
+      "7. Inquiry Is Recorded",
+      "The message, classification, extracted details and reply are saved in a structured record.",
+      "Automation system",
+      "Inquiry record"
+     ],
+     [
+      "8. Inquiry Is Categorized",
+      "The inquiry is marked as Potential Lead, Possible Lead, or Not a Lead, and checked for escalation.",
+      "AI and rules",
+      "Lead status"
+     ],
+     [
+      "9. Next Action Is Triggered",
+      "The correct next step is taken: finish, ask for details, save a lead and notify sales or escalate to a human.",
+      "Automation system and team",
+      "Action completed"
+     ]
+    ]
+   },
+   {
+    "type": "h2",
+    "id": "8-2-where-the-workflow-makes-decisions",
+    "number": "8.2",
+    "text": "Where the Workflow Makes Decisions"
+   },
+   {
+    "type": "li",
+    "text": "Classification: the AI decides what type of inquiry has arrived.",
+    "page": 12
+   },
+   {
+    "type": "li",
+    "text": "Lead qualification: the AI checks for project intent or shared contact details.",
+    "page": 12
+   },
+   {
+    "type": "li",
+    "text": "Escalation: complex, sensitive, or uncertain cases go to a human instead of being guessed.",
+    "page": 12
+   }
+  ]
+ },
+ {
+  "id": "9-workflow-diagram",
+  "number": "9",
+  "title": "Workflow Diagram",
+  "page": 13,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The diagram below shows the designed workflow from the first customer message to the final next action, including the decision logic that separates leads, routine inquiries and complex cases.",
+    "page": 13
+   },
+   {
+    "type": "workflow",
+    "id": "main"
+   },
+   {
+    "type": "p",
+    "text": "Note: Steps 3 and 4 of the nine-step table (classification and extraction) are combined into the diagram boxes for readability. This is a designed workflow and is not a deployed system.",
+    "page": 13
+   }
+  ]
+ },
+ {
+  "id": "10-testing-scenario-1-simple-question",
+  "number": "10",
+  "title": "Testing Scenario 1: Simple Question",
+  "page": 14,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Purpose: to test how the workflow handles a short, routine question that does not contain project details.",
+    "page": 14
+   },
+   {
+    "type": "qa",
+    "rows": [
+     [
+      "Customer Message",
+      "\"Hi, do you offer consultations for new projects?\""
+     ],
+     [
+      "AI Response",
+      "Hello and thank you for contacting Star Developer! Our team is happy to discuss new project ideas with you. I cannot confirm the consultation format, schedule or any related details from here, as these need to be confirmed by the team. If you would like to arrange a discussion, please share your name, your preferred contact method and a short description of your project idea. I will pass your request to the team so they can follow up with you."
+     ],
+     [
+      "Inquiry Classification",
+      "Consultation Request"
+     ],
+     [
+      "Lead Status",
+      "Possible Lead (contact details and project need not yet provided)"
+     ],
+     [
+      "Next Action",
+      "Record the inquiry and request name, contact method and a brief project description. When the customer replies, create or update the lead and notify the team so that a human can confirm the consultation."
+     ]
+    ],
+    "kind": "scenario"
+   }
+  ]
+ },
+ {
+  "id": "11-testing-scenario-2-service-inquiry",
+  "number": "11",
+  "title": "Testing Scenario 2: Service Inquiry",
+  "page": 14,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Purpose: to test that the AI answers a cost question without inventing a price and asks for useful project details instead.",
+    "page": 14
+   },
+   {
+    "type": "qa",
+    "rows": [
+     [
+      "Customer Message",
+      "\"What is the cost of developing an e-commerce website for my online shop?\""
+     ],
+     [
+      "AI Response",
+      "Thank you for your interest in Star Developer! Website development, including e-commerce websites, is one of the services we provide. I cannot give an exact price here, because the cost depends on your requirements, such as the number of products, the design you need, the payment options and any special features. Our team can review your requirements and then provide a proper quotation. To help us prepare, could you tell me what you sell, roughly how many products you plan to list and whether you already have branding or a website? If you would like the team to contact you, please share your name and preferred contact method."
+     ],
+     [
+      "Inquiry Classification",
+      "Pricing Inquiry"
+     ],
+     [
+      "Lead Status",
+      "Potential Lead (interested in an e-commerce website; contact details pending)"
+     ],
+     [
+      "Next Action",
+      "Record the inquiry and tag the service as Website Development (E-commerce). Request project details and contact information. Once received, create a lead and route it to the sales team for a human-prepared quotation."
+     ]
+    ],
+    "kind": "scenario"
+   },
+   {
+    "type": "callout",
+    "title": "What This Scenario Proves",
+    "text": "The AI does not invent a price, a price range or a discount. It explains why the cost depends on requirements and moves the conversation toward information the team needs.",
+    "items": []
+   }
+  ]
+ },
+ {
+  "id": "12-testing-scenario-3-potential-lead",
+  "number": "12",
+  "title": "Testing Scenario 3: Potential Lead",
+  "page": 14,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Purpose: to test lead handling when a customer shows clear intent and provides contact details. The customer name and email address below are fictional sample test data.",
+    "page": 14
+   },
+   {
+    "type": "qa",
+    "rows": [
+     [
+      "Customer Message",
+      "\"Hello, I am Muhammad Yasir. I am launching an online bookstore and need a professional e- commerce website. Please ask someone from your team to contact me at my3154831409@gmail.com.\""
+     ],
+     [
+      "AI Response",
+      "Hello Yasir and thank you for contacting Star Developer! An e-commerce website for your online bookstore falls under our website development services and our team would be glad to discuss it with you. I have noted your request and a team member will follow up using the email address you provided. To help the team prepare, you are welcome to share a few details: the kind of books you plan to sell, your design preferences and the payment options you would like to offer."
+     ],
+     [
+      "Inquiry Classification",
+      "Potential Lead"
+     ],
+     [
+      "Lead Status",
+      "Potential Lead (high intent, contact details provided)"
+     ],
+     [
+      "Next Action",
+      "Create a lead record, categorize it as a Potential Lead, notify the sales team and schedule human follow-up. Set the follow-up status to Pending."
+     ]
+    ],
+    "kind": "scenario"
+   },
+   {
+    "type": "h2",
+    "id": "12-1-lead-handling-steps",
+    "number": "12.1",
+    "text": "Lead Handling Steps"
+   },
+   {
+    "type": "flow",
+    "steps": [
+     "Lead Identified",
+     "Details Extracted",
+     "Lead Record Created",
+     "Sales Team Notified",
+     "Human Follow-Up Scheduled",
+     "Follow-Up Status Tracked"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "13-testing-results-summary",
+  "number": "13",
+  "title": "Testing Results Summary",
+  "page": 15,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The table below summarizes the three testing scenarios.",
+    "page": 15
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Scenario",
+      "Customer Intent",
+      "AI Response Type",
+      "Next Action",
+      "Lead Status"
+     ],
+     [
+      "1. Simple question",
+      "Find out whether a consultation is possible.",
+      "Friendly answer, no unconfirmed details, request for contact and project idea.",
+      "Record inquiry; collect details; team confirms consultation.",
+      "Possible Lead"
+     ],
+     [
+      "2. Service inquiry",
+      "Learn the cost of an e-commerce website.",
+      "No price given; explains cost factors; asks for project details.",
+      "Record; collect requirements; route to sales for quotation.",
+      "Potential Lead"
+     ],
+     [
+      "3. Potential lead",
+      "Have the team contact them about an e-commerce website.",
+      "Confirms request, notes contact method, invites helpful details.",
+      "Create lead; notify sales; schedule human follow-up.",
+      "Potential Lead (high intent)"
+     ]
+    ]
+   },
+   {
+    "type": "callout",
+    "title": "Testing Observation",
+    "text": "In all three scenarios, the AI stayed within the approved business information, did not invent prices, timelines, or policies and always ended with a clear next step. The tests show the designed behaviour of the prompt; they do not provide performance statistics.",
+    "items": []
+   }
+  ]
+ },
+ {
+  "id": "14-bonus-automation-lead-recording",
+  "number": "14",
+  "title": "Bonus Automation: Lead Recording",
+  "page": 16,
+  "blocks": [
+   {
+    "type": "h2",
+    "id": "14-1-concept",
+    "number": "14.1",
+    "text": "Concept"
+   },
+   {
+    "type": "p",
+    "text": "The bonus automation automatically saves qualified customer leads into a structured lead record, such as a Google Sheets lead sheet, so that the sales team can review and follow up. This is a designed automation concept. No actual Google Sheets integration has been deployed.",
+    "page": 16
+   },
+   {
+    "type": "flow",
+    "steps": [
+     "Customer Sends Message",
+     "AI Understands Message",
+     "AI Identifies Lead",
+     "AI Extracts Details",
+     "Lead Record Created",
+     "Saved in Lead Sheet",
+     "Sales Team Reviews",
+     "Follow-Up Begins"
+    ]
+   },
+   {
+    "type": "h2",
+    "id": "14-2-information-recorded",
+    "number": "14.2",
+    "text": "Information Recorded"
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Field",
+      "Description",
+      "Filled By"
+     ],
+     [
+      "Date/Time",
+      "When the inquiry was received or the record was created.",
+      "Automation system"
+     ],
+     [
+      "Customer Name",
+      "The name the customer shared, if any.",
+      "AI extraction"
+     ],
+     [
+      "Contact Information",
+      "Email address or phone number, and preferred contact method.",
+      "AI extraction"
+     ],
+     [
+      "Channel",
+      "Where the message came from (website chat, email, social media).",
+      "Automation system"
+     ],
+     [
+      "Inquiry",
+      "The customer's original message.",
+      "Automation system"
+     ],
+     [
+      "Service Interested In",
+      "For example Website Development or AI Automation.",
+      "AI classification"
+     ],
+     [
+      "Requirement Summary",
+      "A short summary of what the customer needs.",
+      "AI summary"
+     ],
+     [
+      "Lead Status",
+      "Potential Lead, Possible Lead or Not a Lead.",
+      "AI and rules"
+     ],
+     [
+      "Follow-Up Status",
+      "Pending, In Progress, or Completed.",
+      "Sales team"
+     ],
+     [
+      "Notes",
+      "Missing details or remarks for the sales team.",
+      "AI and sales team"
+     ]
+    ]
+   },
+   {
+    "type": "h2",
+    "id": "14-3-when-a-record-is-created-and-how-it-is-categorized",
+    "number": "14.3",
+    "text": "When a Record Is Created and How It Is Categorized"
+   },
+   {
+    "type": "p",
+    "text": "A record is created when the AI identifies a potential or possible lead, or when the customer shares contact details. General questions with no project interest are only recorded as inquiries.",
+    "page": 16
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Lead Status",
+      "When It Applies",
+      "Action"
+     ],
+     [
+      "Potential Lead",
+      "Clear project need or request for contact, with contact details available.",
+      "Create the lead record, notify the sales team, schedule human follow-up."
+     ],
+     [
+      "Possible Lead",
+      "Some interest, but the project need or contact details are unclear.",
+      "Create or update the record, ask for the missing details, review again when the customer replies."
+     ],
+     [
+      "Not a Lead",
+      "General question with no project intent.",
+      "Record the inquiry only and continue normal support."
+     ]
+    ]
+   },
+   {
+    "type": "h2",
+    "id": "14-4-if-important-information-is-missing",
+    "number": "14.4",
+    "text": "If Important Information Is Missing"
+   },
+   {
+    "type": "li",
+    "text": "The AI writes \"Not provided\" in the missing fields and never guesses or invents values.",
+    "page": 16
+   },
+   {
+    "type": "li",
+    "text": "The customer is politely asked for the missing details, especially a name and a contact method.",
+    "page": 17
+   },
+   {
+    "type": "li",
+    "text": "The lead is saved with the status \"Possible Lead\" or \"Contact details pending\", so that it is not lost.",
+    "page": 17
+   },
+   {
+    "type": "li",
+    "text": "When the customer replies, the existing record is updated instead of creating a duplicate.",
+    "page": 17
+   },
+   {
+    "type": "li",
+    "text": "If no contact method is ever provided, the record stays visible to the team, who decide whether any further action is possible.",
+    "page": 17
+   },
+   {
+    "type": "h2",
+    "id": "14-5-sample-lead-record",
+    "number": "14.5",
+    "text": "Sample Lead Record"
+   },
+   {
+    "type": "p",
+    "text": "The following record illustrates how Scenario 3 would appear in the lead sheet. All values are fictional sample data.",
+    "page": 17
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Field",
+      "Sample Value"
+     ],
+     [
+      "Date/Time",
+      "Filled automatically when the record is created"
+     ],
+     [
+      "Customer Name",
+      "Muhammad Yasir (sample)"
+     ],
+     [
+      "Contact Information",
+      "My3154831409@gmail.com (sample)"
+     ],
+     [
+      "Channel",
+      "Website chat"
+     ],
+     [
+      "Inquiry",
+      "Needs a professional e-commerce website for an online bookstore."
+     ],
+     [
+      "Service Interested In",
+      "Website Development (E-commerce)"
+     ],
+     [
+      "Lead Status",
+      "Potential Lead"
+     ],
+     [
+      "Follow-Up Status",
+      "Pending (sales team notified)"
+     ],
+     [
+      "Notes",
+      "Budget, features and timeline not yet provided."
+     ]
+    ]
+   },
+   {
+    "type": "h2",
+    "id": "14-6-why-this-helps-the-business",
+    "number": "14.6",
+    "text": "Why This Helps the Business"
+   },
+   {
+    "type": "li",
+    "text": "No potential customer is lost inside chat histories or inboxes.",
+    "page": 17
+   },
+   {
+    "type": "li",
+    "text": "The sales team sees all leads in one place, with a short summary of each need.",
+    "page": 17
+   },
+   {
+    "type": "li",
+    "text": "Follow-ups can be tracked and prioritized.",
+    "page": 17
+   },
+   {
+    "type": "li",
+    "text": "Employees spend less time copying details by hand.",
+    "page": 17
+   },
+   {
+    "type": "li",
+    "text": "Records stay consistent because every lead uses the same fields.",
+    "page": 17
+   }
+  ]
+ },
+ {
+  "id": "15-human-oversight-and-escalation",
+  "number": "15",
+  "title": "Human Oversight and Escalation",
+  "page": 17,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "AI should handle routine inquiries, but it should not make every decision. A good automation knows its limits and passes the right cases to people. AI supports employees; it does not replace human judgment.",
+    "page": 17
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Situation",
+      "Why Human Judgment Is Needed",
+      "Automation Behavior"
+     ],
+     [
+      "Complex project requirements",
+      "Technical details need expert review.",
+      "Collect the details and escalate to the team."
+     ],
+     [
+      "Exact pricing or quotations",
+      "Prices depend on a full evaluation by the team.",
+      "Explain that a quotation needs evaluation; route to sales."
+     ],
+     [
+      "Contract-related questions",
+      "Contracts carry legal and financial responsibility.",
+      "Do not answer; escalate to the responsible person."
+     ],
+     [
+      "Complaints",
+      "Customers need empathy and a real solution.",
+      "Acknowledge politely, escalate and record."
+     ],
+     [
+      "Technical issues in existing projects",
+      "Diagnosis requires the technical team.",
+      "Collect the issue description and escalate."
+     ],
+     [
+      "Sensitive customer situations",
+      "Personal or delicate matters require careful handling.",
+      "Avoid automated advice; hand over to a person."
+     ],
+     [
+      "Low-confidence AI responses",
+      "The AI may misunderstand unclear messages.",
+      "Do not guess; escalate with the reason."
+     ],
+     [
+      "High-value leads",
+      "Important opportunities deserve personal attention.",
+      "Notify the sales team promptly for human follow-up."
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "16-business-benefits",
+  "number": "16",
+  "title": "Business Benefits",
+  "page": 18,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "The benefits below describe how the designed workflow supports a business like Star Developer. No performance figures are claimed, because this is a design exercise and not a measured deployment.",
+    "page": 18
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Benefit",
+      "How It Helps",
+      "Example"
+     ],
+     [
+      "Time saving",
+      "Reduces repetitive manual replies.",
+      "Common questions about services receive an automatic reply."
+     ],
+     [
+      "Faster customer support",
+      "Customers can receive a response more quickly.",
+      "A visitor asking a question at night receives a prompt answer."
+     ],
+     [
+      "Lead management",
+      "Potential customers are identified and recorded.",
+      "A customer asking for contact from the team becomes a lead record."
+     ],
+     [
+      "Better organization",
+      "Inquiries are stored in a structured way.",
+      "Every inquiry has a classification, lead status and next action."
+     ],
+     [
+      "Employee productivity",
+      "Employees spend less time on repetitive questions.",
+      "Staff focus on project discussions and quotations."
+     ],
+     [
+      "Follow-up",
+      "Potential leads are routed for human follow-up.",
+      "The sales team is notified when a high-intent lead arrives."
+     ],
+     [
+      "Reduced manual errors",
+      "A standardized prompt keeps responses consistent.",
+      "The same approved information is used in every reply."
+     ],
+     [
+      "Scalability",
+      "The workflow can handle more inquiries than a purely manual process.",
+      "A larger number of messages can be processed in the same way."
+     ]
+    ]
+   },
+   {
+    "type": "callout",
+    "title": "Supporting Employees, Not Replacing Them",
+    "text": "The purpose of this automation is to remove repetitive work so that employees can concentrate on conversations, requirements, quotations and relationships that need human judgment.",
+    "items": []
+   }
+  ]
+ },
+ {
+  "id": "17-practical-automation-logic",
+  "number": "17",
+  "title": "Practical Automation Logic",
+  "page": 19,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Every inquiry follows one of four logical paths. The prompt classifies the inquiry and the automation chooses the path.",
+    "page": 19
+   },
+   {
+    "type": "h3",
+    "text": "Path 1: Routine Inquiry",
+    "page": 19
+   },
+   {
+    "type": "flow",
+    "steps": [
+     "AI Answers",
+     "Record Inquiry",
+     "Finish"
+    ]
+   },
+   {
+    "type": "h3",
+    "text": "Path 2: Service Inquiry",
+    "page": 19
+   },
+   {
+    "type": "flow",
+    "steps": [
+     "AI Answers",
+     "Collect Requirements",
+     "Record Inquiry"
+    ]
+   },
+   {
+    "type": "h3",
+    "text": "Path 3: Potential Lead",
+    "page": 19
+   },
+   {
+    "type": "flow",
+    "steps": [
+     "AI Identifies Lead",
+     "Save Lead",
+     "Notify Sales Team",
+     "Human Follow-Up"
+    ]
+   },
+   {
+    "type": "h3",
+    "text": "Path 4: Unknown or Complex Inquiry",
+    "page": 19
+   },
+   {
+    "type": "flow",
+    "steps": [
+     "AI Cannot Answer Confidently",
+     "Avoid Guessing",
+     "Escalate to Human",
+     "Record Inquiry"
+    ]
+   },
+   {
+    "type": "table",
+    "rows": [
+     [
+      "Path",
+      "When It Applies",
+      "Example",
+      "Human Involvement"
+     ],
+     [
+      "1. Routine",
+      "The question can be fully answered from approved information.",
+      "Which services does the company offer?",
+      "None, unless the customer continues the conversation."
+     ],
+     [
+      "2. Service",
+      "The customer asks about a service and the team needs more details.",
+      "Can you build a booking website?",
+      "Review requirements later."
+     ],
+     [
+      "3. Potential lead",
+      "The customer shows project intent or asks to be contacted.",
+      "I need an e-commerce website. Please contact me.",
+      "Sales team follows up personally."
+     ],
+     [
+      "4. Unknown or complex",
+      "The AI is unsure, or the topic is sensitive or technical.",
+      "A complaint, a contract question, or an unclear request.",
+      "A team member takes over the case."
+     ]
+    ]
+   },
+   {
+    "type": "callout",
+    "title": "Core Rule",
+    "text": "When the AI is not confident, it must not guess. A short, honest reply followed by escalation is always better than an invented answer.",
+    "items": []
+   }
+  ]
+ },
+ {
+  "id": "18-conclusion",
+  "number": "18",
+  "title": "Conclusion",
+  "page": 19,
+  "blocks": [
+   {
+    "type": "p",
+    "text": "This practical task designed an AI Customer Inquiry Automation Workflow for Star Developer, the sample IT and digital services business. Starting from a common business problem, repetitive customer inquiries, the solution created a reusable master prompt, tested it with five realistic customer questions and three testing scenarios and organized the results into a clear workflow with a visual diagram.",
+    "page": 19
+   },
+   {
+    "type": "p",
+    "text": "The bonus automation showed how qualified leads can be recorded in a structured lead sheet so that the sales team can follow up. The workflow follows a simple principle: the AI handles routine questions, records",
+    "page": 19
+   },
+   {
+    "type": "p",
+    "text": "every inquiry, and recognizes potential customers, while humans handle pricing, complex requirements, complaints and relationships.",
+    "page": 20
+   },
+   {
+    "type": "p",
+    "text": "The solution is intentionally practical rather than complex. It is a designed workflow that a business could implement step by step and it demonstrates the thinking of an AI Automation Consultant: understand the business problem, create a controlled prompt, test it, design the workflow, add one useful automation and keep human oversight in place.",
+    "page": 20
+   }
+  ]
+ },
+ {
+  "id": "19-key-takeaways",
+  "number": "19",
+  "title": "Key Takeaways",
+  "page": 20,
+  "blocks": [
+   {
+    "type": "numbered",
+    "rows": [
+     [
+      "1",
+      "Start with the business problem. Repetitive inquiries consume time and can delay responses."
+     ],
+     [
+      "2",
+      "The core workflow is simple: Receive, Understand, Generate, Respond, Record."
+     ],
+     [
+      "3",
+      "One master prompt keeps replies consistent and professional across all inquiries."
+     ],
+     [
+      "4",
+      "The AI must never invent prices, guarantees, timelines, policies or contact details."
+     ],
+     [
+      "5",
+      "Pricing questions need requirements. The AI explains this and asks for project details instead of quoting."
+     ],
+     [
+      "6",
+      "Lead identification turns inquiries into opportunities, and recording keeps them from being lost."
+     ],
+     [
+      "7",
+      "Missing information is marked, not guessed and is requested politely from the customer."
+     ],
+     [
+      "8",
+      "Human oversight remains essential for complex, sensitive, high-value or uncertain cases."
+     ],
+     [
+      "9",
+      "Four logical paths (routine, service, lead, complex) make the automation easy to explain and maintain."
+     ],
+     [
+      "10",
+      "This is a designed workflow, not a deployed system and it supports employees instead of replacing them"
+     ]
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Prepared by Muhammad Yasir | AI Automation Internship | Zayan Soft Tech | Practical Task 02",
+    "page": 20
+   }
+  ]
+ }
+]
