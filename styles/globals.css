@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+.dark { color-scheme: dark; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+body { @apply bg-white text-slate-800 font-sans antialiased dark:bg-navy-950 dark:text-slate-200; }
+:focus-visible { @apply outline-2 outline-offset-2 outline-gold-500; outline-style: solid; }
+
+@layer components {
+  .prose-doc { @apply max-w-[68ch] font-serif text-[1.0625rem] leading-8; }
+  .prose-doc p { @apply my-4; }
+  .prose-doc h2 { @apply mt-12 mb-3 font-sans text-2xl font-bold text-navy-800 dark:text-white scroll-mt-24; }
+  .prose-doc h3 { @apply mt-8 mb-2 font-sans text-lg font-semibold text-navy-800 dark:text-white; }
+  .prose-doc ul { @apply my-4 list-disc space-y-2 pl-6 marker:text-gold-500; }
+  .prose-doc ol { @apply my-4 list-decimal space-y-2 pl-6 marker:font-sans marker:font-semibold marker:text-gold-600; }
+  .btn { @apply inline-flex items-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition-colors; }
+  .btn-primary { @apply bg-gold-500 text-navy-950 hover:bg-gold-400; }
+  .btn-ghost { @apply border border-white/30 text-white hover:bg-white/10; }
+  .btn-outline { @apply border border-navy-200 text-navy-800 hover:bg-navy-50 dark:border-white/20 dark:text-white dark:hover:bg-white/10; }
+  .card { @apply rounded-lg border border-slate-200 bg-white dark:border-white/10 dark:bg-navy-900; }
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes nodein { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes caret { 50% { border-color: transparent; } }
+.hero-rise { animation: rise .7s ease-out both; }
+.hero-rise-2 { animation: rise .7s .15s ease-out both; }
+.hero-rise-3 { animation: rise .7s .3s ease-out both; }
+.wf-node { animation: nodein .5s ease-out both; }
+.type-line { border-right: 2px solid #d7b94a; padding-right: 4px; animation: caret 1s step-end infinite; }
