@@ -43,7 +43,7 @@
 ## 📑 Table of Contents
 
 - [Overview](#-overview)
-- [Live Demo](#-live-demo)
+- [Live Demo](#https://customer-inq-automation-workflow.vercel.app/)
 - [Project at a Glance](#-project-at-a-glance)
 - [Important Notes on Scope](#-important-notes-on-scope)
 - [The Sample Business](#-the-sample-business-star-developer)
@@ -104,7 +104,7 @@ The website presents the complete document as a case-study documentation platfor
 
 | | |
 |---|---|
-| **Website** | https://YOUR-DEPLOYMENT-URL |
+| **Website** | https://customer-inq-automation-workflow.vercel.app/ |
 | **Repository** | https://github.com/YasirAwan4831/ai-customer-inquiry-automation-workflow |
 | **Previous project (Assignment 01)** | https://ai-automation-research.vercel.app/ |
 
