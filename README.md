@@ -44,7 +44,6 @@
 
 - [Overview](#-overview)
 - [Live Demo](#-live-demo)
-- [Screenshots](#-screenshots)
 - [Project at a Glance](#-project-at-a-glance)
 - [Important Notes on Scope](#-important-notes-on-scope)
 - [The Sample Business](#-the-sample-business-star-developer)
@@ -106,7 +105,7 @@ The website presents the complete document as a case-study documentation platfor
 | | |
 |---|---|
 | **Website** | https://YOUR-DEPLOYMENT-URL |
-| **Repository** | https://github.com/YOUR_USERNAME/ai-customer-inquiry-automation |
+| **Repository** | https://github.com/YasirAwan4831/ai-customer-inquiry-automation-workflow |
 | **Previous project (Assignment 01)** | https://ai-automation-research.vercel.app/ |
 
 > Replace the placeholders after you deploy.
@@ -119,7 +118,7 @@ The website presents the complete document as a case-study documentation platfor
 | Item | Detail |
 |---|---|
 | Task | Practical Task 02: Build Your First AI Customer Inquiry Automation Workflow |
-| Candidate | Muhammad Yasir |
+Candidate | [Muhammad Yasir](https://yasirawaninfo.vercel.app/) |
 | Program | AI Automation Internship |
 | Organization | Zayan Soft Tech |
 | Sample business | Star Developer (sample business for this exercise) |
@@ -893,8 +892,6 @@ The goal was to improve presentation, not to shorten or change the content.
 - [x] Prompt block, chat-style response cards and workflow diagram
 - [x] Testing scenarios and bonus automation sections
 - [x] Light and dark mode
-- [ ] Add screenshots and the live demo link to this README
-- [ ] Optional: connect a real lead sheet as a separate, clearly labelled implementation
 
 ---
 
